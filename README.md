@@ -33,11 +33,11 @@ This project was built using HTML, CSS, and JavaScript code.
 
 ## File Structure
 COMP1073-ASSIGN-3/
-- index.html
 - css
   - styles.css
 - js
   - script.js
+- index.html
 - ding.mp3
 - README.md
 
