@@ -163,8 +163,12 @@ body {
     font-size: 1rem;
 }
 
-/*  */
 .todo-item.completed {
     background-color: #e7f8ec;
     border-color: #b7e4c7;
+}
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    opacity: 0.75;
 }
