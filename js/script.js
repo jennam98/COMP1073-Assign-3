@@ -92,3 +92,66 @@ function getFilteredTasks() {
 
     return filteredTasks;
 }
+
+// render tasks 
+
+function renderTasks() {
+    todoList.innerHTML = "";
+
+    const filteredTasks = getFilteredTasks();
+
+    const activeTasks = filteredTasks.filter(function (task) {
+        return !task.completed;
+    });
+
+    const completedTasksList = filteredTasks.filter(function (task) {
+        return task.completed;
+    });
+
+    const orderedTasks = activeTasks.concat(completedTasksList);
+
+    for (let i = 0; i < orderedTasks.length; i++) {
+        const task = orderedTasks[i];
+
+        const listItem = document.createElement("li");
+        listItem.classList.add("todo-item");
+
+        if (task.completed){
+            listItem.classList.add("completed");
+        }
+
+        const leftSide = document.createElement("div");
+        leftSide.classList.add("todo-left");
+
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = task.completed;
+
+        checkbox.addEventListener("change", function () {
+            toggleTask(task.id);
+        });
+
+        const taskSpan = document.createElement("span");
+        taskSpan.classList.add("todo-text");
+        taskSpan.textContent = task.text;
+
+        const deleteButton = document.createElement("button");
+        deleteButton.classList.add("delete-btn");
+        deleteButton.textContent = "Delete";
+
+        deleteButton.addEventListener("click", function () {
+            deleteTask(task.id, listItem);
+        });
+
+        leftSide.appendChild(checkbox);
+        leftSide.appendChild(taskSpan);
+        
+        listItem.appendChild(leftSide);
+        listItem.appendChild(deleteButton);
+
+        todoList.appendChild(listItem);
+    }
+
+    updateStats();
+    toggleEmptyMessage(filteredTasks);
+}
