@@ -21,3 +21,32 @@ function saveTasks() {
     localStorage.setItem("taskBloomTasks", JSON.stringify(tasks));
 }
 
+function loadTasks() {
+    const savedTasks = localStorage.getItem("taskBloomTasks");
+
+    if (savedTasks) {
+        tasks = JSON.parse(savedTasks);
+    }
+}
+
+// event listeners
+
+addBtn.addEventListener("click", addTask);
+
+todoInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        addTask();
+    }
+});
+
+clearCompletedBtn.addEventListener("click", clearCompletedTasks);
+clearAllBtn.addEventListener("click", clearAllTasks);
+
+for (let i = 0; i < filterButtons.length; i++) {
+    filterButtons[i].addEventListener("click", function () {
+        currentFilter = this.dataset.filer;
+        updateActiveFilterButton();
+        renderTasks();
+    });
+}
+
