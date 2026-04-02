@@ -123,3 +123,14 @@ body {
 .secondary-btn:hover {
     background-color: #dde6ff;
 }
+.stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+    padding: 14px;
+    background-color: #f8faff;
+    border-radius: 12px;
+    color: #344054;
+}
