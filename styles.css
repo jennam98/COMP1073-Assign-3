@@ -193,3 +193,7 @@ body {
     color: #667085;
     margin-top: 20px;
 }
+
+.fade-out-red {
+    animation: fadeOutRed 0.4s ease forwards;
+}
