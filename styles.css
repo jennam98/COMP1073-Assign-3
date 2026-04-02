@@ -138,3 +138,16 @@ body {
 #todoList {
     list-style: none;
 }
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background-color: #f9fafb;
+    border: 1px solid #eaecf0;
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+    animation: slideIn 0.3s ease;
+}
