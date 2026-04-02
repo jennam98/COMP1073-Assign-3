@@ -50,3 +50,25 @@ for (let i = 0; i < filterButtons.length; i++) {
     });
 }
 
+// add tasks 
+
+function addTask() {
+    const taskText = todoInput.value.trim();
+
+    if (taskText === "") {
+        alert("Please type a task before adding.");
+        return;
+    }
+
+    const taskObject = {
+        id: Date.now(),
+        text: taskText,
+        completed: false
+    };
+
+    tasks.push(taskObject);
+    todoInput.value = "";
+
+    saveTasks();
+    renderTasks();
+}
