@@ -155,3 +155,22 @@ function renderTasks() {
     updateStats();
     toggleEmptyMessage(filteredTasks);
 }
+
+// toggle task
+
+function toggleTask(taskId) {
+    for (let i = 0; i < tasks.length; i++) {
+        if (tasks[i].id === taskId) {
+            tasks[i].completed = !tasks[i].completed;
+
+            if (tasks[i].completed) {
+                playDingSound();
+            }
+
+            break;
+        }
+    }
+
+    saveTasks();
+    renderTasks();
+}
