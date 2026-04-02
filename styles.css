@@ -36,3 +36,40 @@ body {
     color: #667085;
     font-size: 1rem;
 }
+
+.input-section {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 14px;
+  border: 2px solid #d7def0;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.input-section input:focus {
+  border-color: #7b8cff;
+  box-shadow: 0 0 0 4px rgba(123, 140, 255, 0.15);
+}
+
+.input-section button {
+  padding: 14px 20px;
+  border: none;
+  background-color: #7b8cff;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.input-section button:hover {
+  transform: translateY(-1px);
+  background-color: #6577f4;
+}
