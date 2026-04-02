@@ -151,3 +151,15 @@ body {
     transition: all 0.3s ease;
     animation: slideIn 0.3s ease;
 }
+.todo-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.todo-text {
+    word-break: break-word;
+    font-size: 1rem;
+}
+
