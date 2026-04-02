@@ -72,3 +72,23 @@ function addTask() {
     saveTasks();
     renderTasks();
 }
+
+// get filtered tasks
+
+function getFilteredTasks() {
+    let filteredTasks = [];
+
+    if (currentFilter === "all") {
+        filteredTasks = tasks;
+    } else if (currentFilter === "active") {
+        filteredTasks = tasks.filter(function (task) {
+            return !task.completed;
+        });
+    } else if (currentFilter === "completed") {
+        filteredTasks = tasks.filter(function (task) {
+            return task.completed;
+        });
+    }
+
+    return filteredTasks;
+}
