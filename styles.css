@@ -172,3 +172,24 @@ body {
     text-decoration: line-through;
     opacity: 0.75;
 }
+
+.delete-btn {
+    border: none;
+    background-color: #ff5c5c;
+    color: white;
+    padding: 9px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: #e64848;
+}
+
+.empty-message {
+    text-align: center;
+    color: #667085;
+    margin-top: 20px;
+}
