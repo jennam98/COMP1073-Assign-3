@@ -105,3 +105,21 @@ body {
     margin-bottom: 20px;
     flex-wrap: wrap;
 }
+
+.secondary-btn, .danger-btn {
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.secondary-btn {
+    background-color: #eef2ff;
+    color: #344054;
+}
+
+.secondary-btn:hover {
+    background-color: #dde6ff;
+}
