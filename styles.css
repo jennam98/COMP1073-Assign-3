@@ -223,3 +223,7 @@ body {
         transform: translateY(0);
     }
 }
+.sr-only {
+    position: absolute;
+    left: -9999px;
+}
