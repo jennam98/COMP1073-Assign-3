@@ -9,3 +9,15 @@ const clearCompletedBtn = document.getElementById("clearCompletedBtn");
 const clearAllBtn = document.getElementById("clearAllBtn");
 const dingSound = document.getElementById("dingSound");
 const filterButtons = document.querySelectorAll(".filter-btn");
+
+// data
+
+let tasks = [];
+let currentFilter = "all";
+
+// local storge 
+
+function saveTasks() {
+    localStorage.setItem("taskBloomTasks", JSON.stringify(tasks));
+}
+
