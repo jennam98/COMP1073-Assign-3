@@ -94,3 +94,7 @@ body {
 .filter-btn:hover {
     background-color: #dde6ff;
 }
+.active-filter {
+    background-color: #7b8cff;
+    color: white;
+}
