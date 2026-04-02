@@ -174,3 +174,18 @@ function toggleTask(taskId) {
     saveTasks();
     renderTasks();
 }
+
+// delete task 
+
+function deleteTask(taskId, listItemElement) {
+    listItemElement.classList.add("fade-out-red");
+
+    setTimeout(function () {
+        tasks = tasks.filter(function (task) {
+            return task.id !== taskId;
+        });
+
+        saveTasks();
+        renderTasks();
+    }, 380);
+}
