@@ -73,3 +73,10 @@ body {
   transform: translateY(-1px);
   background-color: #6577f4;
 }
+
+.filter-section {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
