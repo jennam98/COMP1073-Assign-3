@@ -134,3 +134,7 @@ body {
     border-radius: 12px;
     color: #344054;
 }
+
+#todoList {
+    list-style: none;
+}
