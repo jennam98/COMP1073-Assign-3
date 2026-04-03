@@ -200,3 +200,35 @@ function clearCompletedTasks() {
     saveTasks();
     renderTasks();
 }
+
+// clear all tasks 
+
+function clearAllTasks() {
+    const confirmDelete = confirm("Are you sure you want to delete all tasks?");
+
+    if (confirmDelete) {
+        tasks = [];
+        saveTasks();
+        renderTasks();
+    }
+}
+
+// update stats
+
+function updateStats(){
+    const total = tasks.length;
+    let completed = 0;
+
+    for (let i = 0; i < tasks.length; i++) {
+        if (tasks[i].completed) {
+            completed++;
+        }
+    }
+
+    const remaining = total - completed;
+
+    totalTasks.textContent = total;
+    completedTasks.textContent = completed;
+    remainingTasks.textContent = remaining;
+}
+
