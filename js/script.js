@@ -263,3 +263,15 @@ function updateActiveFilterButton() {
     activeButton.classList.add("active-filter");
 }
 
+// play sound
+
+function playDingSound(){
+    if (dingSound) {
+        dingSound.currentTime = 0;
+
+        dingSound.play().catch(function () {
+
+        });
+    }
+}
+
