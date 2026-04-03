@@ -251,3 +251,15 @@ function toggleEmptyMessage(filteredTasks) {
         emptyMessage.style.display = "none";
     }
 }
+
+// filter button style
+
+function updateActiveFilterButton() {
+    for (let i = 0; i < filterButtons.length; i++) {
+        filterButtons[i].classList.remove("active-filter");
+    }
+
+    const activeButton = document.querySelector(`[data-filter="${currentFilter}"]`);
+    activeButton.classList.add("active-filter");
+}
+
