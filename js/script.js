@@ -232,3 +232,22 @@ function updateStats(){
     remainingTasks.textContent = remaining;
 }
 
+// empty message
+
+function toggleEmptyMessage(filteredTasks) {
+    if (filteredTasks.length === 0) {
+        if (tasks.length === 0) {
+            emptyMessage.textContent = "No tasks yet. Add one to get started.";
+        } else if (currentFilter === "active") {
+            emptyMessage.textContent = "No active tasks found.";
+        } else if (currentFilter === "completed") {
+            emptyMessage.textContent = "No completed tasks found.";
+        } else {
+            emptyMessage.textContent = "No tasks found.";
+        }
+        
+        emptyMessage.style.display = "block";
+    } else {
+        emptyMessage.style.display = "none";
+    }
+}
