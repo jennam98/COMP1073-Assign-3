@@ -189,3 +189,14 @@ function deleteTask(taskId, listItemElement) {
         renderTasks();
     }, 380);
 }
+
+// cleare completed tasks 
+
+function clearCompletedTasks() {
+    tasks = tasks.filter(function (task) {
+        return !task.completed;
+    });
+
+    saveTasks();
+    renderTasks();
+}
