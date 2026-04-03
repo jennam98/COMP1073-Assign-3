@@ -275,3 +275,6 @@ function playDingSound(){
     }
 }
 
+loadTasks();
+updateActiveFilterButton();
+renderTasks();
