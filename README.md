@@ -50,5 +50,4 @@ COMP1073-ASSIGN-3/
 https://github.com/jennam98/COMP1073-Assign-3/tree/main
 
 ## Live Website Link
-Add your deployed website link here:
-[Live Site Here]
+https://jennam98.github.io/COMP1073-Assign-3/
